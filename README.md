@@ -7,8 +7,8 @@ So that explains it easily.
 ### How Does it work?
 ---
 Works simple through an HTML that contacts the site and checks for the file "earth.mp4",
-If it finds the file, then places it in the center of the screen and plays it continiously,
-possibly looping it, oh and also its realtime synced, so it links your real life time, with it.
+If it finds the file, then full screens it and plays it continiously,
+oh and also its realtime synced, so it links your real life time, with it.
 ---
 Who made this project?
 ---
