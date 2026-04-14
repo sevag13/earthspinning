@@ -9,3 +9,9 @@ So that explains it easily.
 Works simple through an HTML that contacts the site and checks for the file "earth.mp4",
 If it finds the file, then places it in the center of the screen and plays it continiously,
 possibly looping it.
+---
+Who made this project?
+---
+### [yaudr](https://github.com/YAUDR) (coded the html file + got the 24 hour earth spinning slowly)
+### [sevag13](https://github.com/sevag13) (github site host, that's me!)
+---
