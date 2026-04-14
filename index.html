@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>earth realtime sync</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<video id="earth" autoplay muted loop>
+  <source src="earth.mp4" type="video/mp4">
+</video>
+
+<script>
+const video = document.getElementById("earth")
+
+function getSecondsSinceMidnight() {
+  const now = new Date()
+  return now.getHours() * 3600 +
+         now.getMinutes() * 60 +
+         now.getSeconds()
+}
+
+function syncVideo() {
+  const target = getSecondsSinceMidnight()
+
+  // only adjust if desynced by more than 1 second
+  if (Math.abs(video.currentTime - target) > 1) {
+    video.currentTime = target
+  }
+}
+
+// initial sync when video is ready
+video.addEventListener("loadedmetadata", () => {
+  video.currentTime = getSecondsSinceMidnight()
+})
+
+// keep it synced every 5 seconds
+setInterval(syncVideo, 5000)
+</script>
+
+</body>
+</html>
